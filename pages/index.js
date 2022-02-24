@@ -15,7 +15,7 @@ export default function Home() {
     console.log("load todos")
     fetch('/api/list')
         .then(res => res.json())
-        .then(data => {
+        .then(data => {a
                 setData(data)
                 setLoading(false)
             }
@@ -75,10 +75,11 @@ export default function Home() {
                            </form>
                    }
 
-                   {data.map((item) =>
+                   {data.map((item) =>{
                        <a href="#" onClick={() => removeTodo(item)} className={styles.card}>
                            <p>{item}</p>
-                       </a>)}
+                       </a>})
+                    }
 
                </div>
            </main>
